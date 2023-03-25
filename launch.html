@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Curtain Opening Animation</title>
+    <link rel="stylesheet" type="text/css" href="tstyle.css" />
+    <script type="text/javascript" src="tscript.js"></script>
+      
+  </head>
+  <body>
+    <div id="curtain">
+      <div id="left"></div>
+      <div id="right"></div>
+    </div>
+    <div id="content">
+        <h1>Launching Website in <span id="timer" style="color: blue;">10</span> seconds.</h1>
+        <script>
+            var count = 10;
+            var timer = setInterval(function() {
+                count--;
+                document.getElementById("timer").innerHTML = count;
+                if (count === 0) {
+                    redirectToPage();
+                }
+            }, 1000);
+        </script>
+    </div>
+  </body>
+</html>
